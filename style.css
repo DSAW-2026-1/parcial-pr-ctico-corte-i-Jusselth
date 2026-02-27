@@ -1,0 +1,63 @@
+:root {
+    --azul: #0a1a8e;
+    --cian: #61dafb;
+    --rosa: #d65db1;
+    --size: 50px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ccc;
+}
+
+.canvas {
+    width: 400px;
+    height: 300px;
+    background-color: var(--azul);
+    padding: 1.5rem; /* Modelo de caja: espacio interno */
+    
+    /* Flexbox: separa la fila de arriba de la de abajo */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between; /* Separa los grupos a las esquinas */
+    width: 100%;
+}
+
+.corner-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* LA CLAVE: El espejo */
+.mirror {
+    flex-direction: row-reverse;
+}
+
+.shape {
+    width: var(--size);
+    height: var(--size);
+}
+
+.square {
+    background-color: var(--cian);
+}
+
+.circle {
+    background-color: var(--rosa);
+    border-radius: 50%;
+}
